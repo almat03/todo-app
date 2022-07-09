@@ -1,0 +1,43 @@
+body {
+  font-family: sans-serif;
+  background-color: #e5e5e5e5;
+}
+
+.app {
+  height: 500px;
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  border: 5px solid #abcea1;
+  border-radius: 8px;
+}
+
+#addNew {
+  background-color: rgba(171, 206, 161, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fa-plus {
+  background-color: #abcea1;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#tasks {
+  display: grid;
+  gap: 13px;
+}
+
+#tasks div {
+  background-color: #e2eede;
+  border: 3px solid #abcea1;
+  padding: 6px;
+  border-radius: 5px;
+  display: grid;
+  gap: 4px;
+}
