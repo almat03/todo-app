@@ -70,7 +70,9 @@
               >
                 Close
               </button>
-              <button type="submit" class="btn btn-primary">Add</button>
+              <button type="submit" id="add" class="btn btn-primary">
+                Add
+              </button>
             </div>
           </div>
         </div>
@@ -82,18 +84,18 @@
           <span class="small secondary">2022-02-09</span>
           <p>Go to gym</p>
           <span class="options">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <i class="fa-solid fa-trash-can"></i>
+            <i onClick="uploadTask(this)" class="fa-solid fa-pen-to-square"></i>
+            <i onClick="deleteTask(this)" class="fa-solid fa-trash-can"></i>
           </span>
         </div>
 
         <div>
-          <span>Task 1</span>
-          <span>2022-02-09</span>
-          <p>Go to gym</p>
+          <span class="fw-bold">Task 2</span>
+          <span class="small secondary">2022-03-04</span>
+          <p>Go to jimbojambo</p>
           <span class="options">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <i class="fa-solid fa-trash-can"></i>
+            <i onClick="uploadTask(this)" class="fa-solid fa-pen-to-square"></i>
+            <i onClick="deleteTask(this)" class="fa-solid fa-trash-can"></i>
           </span>
         </div>
       </div>

@@ -5,6 +5,7 @@ let data = {};
 let dateInput = document.getElementById("dateInput");
 let textarea = document.getElementById("textarea");
 let tasks = document.getElementById("tasks");
+let add = document.getElementById("add");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -26,6 +27,11 @@ let acceptData = () => {
   data["date"] = dateInput.value;
   data["descrption"] = textarea.value;
   createTask();
+  add.setAttribute("data-bs-dismiss", "modal");
+  add.click();
+  (() => {
+    add.setAttribute("data-bs-dismiss", "");
+  })();
 };
 
 let createTask = () => {
@@ -35,8 +41,8 @@ let createTask = () => {
   <span class="small secondary">${data.date}</span>
     <p>${data.descrption}</p>
     <span class="options">
-      <i class="fa-solid fa-pen-to-square"></i>
-      <i class="fa-solid fa-trash-can"></i>
+      <i onClick="uploadTask(this)" class="fa-solid fa-pen-to-square"></i>
+      <i onClick="deleteTask(this)" class="fa-solid fa-trash-can"></i>
     </span>
 </div>
 `;
@@ -48,3 +54,9 @@ let resetForm = () => {
   dateInput.value = "";
   textarea.value = "";
 };
+
+let deleteTask = (e) => {
+  e.parentElement.parentElement.remove();
+};
+
+let uploadTask = (e) => {};
